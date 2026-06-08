@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zenith</title>
+  <meta name="description" content="A message from Zenith." />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Zenith" />
+  <meta property="og:description" content="A message from Zenith." />
+
+  <!-- Favicon: solid brandmark in burgundy, inlined so there are zero external requests -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 467 467'%3E%3Crect width='467' height='467' fill='%23530D11'/%3E%3C/svg%3E" />
+
+  <style>
+    /* ---- Brand tokens (from brand-system.md) ---- */
+    :root {
+      --burgundy: #530D11;
+      --cream:    #F7F4EC;
+      --black:    #1F1E1E;
+      --warm-grey:#ADA290;
+      --rose:     #F3B8AE;
+
+      /* Self Modern / Suisse Intl are licensed brand fonts and cannot ship in a
+         public repo, so we fall back to high-quality system stacks that keep the
+         serif-display / sans-body relationship. */
+      --serif: Georgia, 'Times New Roman', 'Self Modern', serif;
+      --sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--cream);
+      color: var(--black);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    /* ---- Logo ---- */
+    .brandmark {
+      display: block;
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 28px;
+      color: var(--burgundy);
+    }
+    .wordmark {
+      display: block;
+      width: 168px;
+      height: auto;
+      margin: 0 auto 40px;
+      color: var(--burgundy);
+    }
+
+    hr.rule {
+      border: 0;
+      border-top: 1px solid var(--warm-grey);
+      width: 64px;
+      margin: 0 auto 40px;
+      opacity: 0.6;
+    }
+
+    /* ---- Type ---- */
+    h1 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 1.15;
+      color: var(--burgundy);
+      text-align: center;
+      margin: 0 0 32px;
+    }
+
+    .message p {
+      font-size: 17px;
+      line-height: 1.65;
+      margin: 0 0 20px;
+    }
+
+    .message a {
+      color: var(--burgundy);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .signature {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 19px;
+      color: var(--burgundy);
+      margin-top: 36px;
+    }
+    .signature .name { font-style: normal; }
+    .signature .role {
+      display: block;
+      font-family: var(--sans);
+      font-style: normal;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--warm-grey);
+      margin-top: 6px;
+    }
+
+    footer {
+      margin-top: 56px;
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--warm-grey);
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 26px; }
+      .message p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main>
+      <!-- Brandmark (solid) — inlined SVG, fills with currentColor -->
+      <svg class="brandmark" viewBox="0 0 467 467" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zenith">
+        <path d="M233.316 0C362.174 0 466.634 104.46 466.634 233.317C466.634 362.175 362.174 466.634 233.316 466.634C104.459 466.634 0.000257544 362.175 0 233.317C0 104.46 104.459 0.000133508 233.316 0ZM234.509 67.9961C234.135 67.9921 233.807 68.0041 233.533 68.0098C233.259 68.0042 232.933 67.9922 232.559 67.9961C232.022 68.0018 231.381 68.0313 230.654 68.0752C229.546 68.1113 228.181 68.1675 226.603 68.2666C222.247 68.5402 216.2 69.1122 209.412 70.3291C196.193 72.6991 178.643 77.7562 165.754 89.1006L163.072 91.5049C156.767 97.3209 150.203 104.637 145.717 114.646C140.858 125.485 138.795 138.657 140.907 155.279L141.382 158.652C143.758 173.886 150.217 189.024 158.46 203.121C145.15 214.814 131.973 227.901 121.378 241.672C109.636 256.933 100.373 273.915 98.4551 291.412C96.0203 313.612 99.3937 331.775 106.83 346.429C114.251 361.05 125.368 371.496 137.355 378.859C160.998 393.382 188.776 396.425 202.224 396.425C213.105 396.425 221.97 394.504 228.203 392.538C230.175 391.916 231.882 391.269 233.316 390.692C234.751 391.269 236.457 391.916 238.429 392.538C244.661 394.504 253.528 396.425 264.409 396.425C277.857 396.425 305.64 393.383 329.283 378.859C341.27 371.496 352.389 361.05 359.81 346.429C367.245 331.776 370.612 313.611 368.178 291.412C366.259 273.915 356.997 256.933 345.255 241.672C334.66 227.902 321.482 214.82 308.173 203.127C316.417 189.028 322.874 173.888 325.251 158.652C328.105 140.425 326.098 126.208 320.915 114.646C315.788 103.207 307.947 95.2865 300.879 89.1006H300.872C287.999 77.7728 270.588 72.709 257.465 70.335C250.73 69.1168 244.736 68.5406 240.419 68.2666C238.85 68.167 237.494 68.1113 236.394 68.0752C235.675 68.031 235.041 68.0018 234.509 67.9961ZM169.635 220.271C175.339 228.237 181.349 235.67 187.154 242.345C196.99 253.653 206.591 263.21 213.866 270.063C215.485 271.589 216.997 272.977 218.366 274.228C215.901 276.858 213.116 280.083 210.36 283.848C202.619 294.426 194.414 310.079 194.811 328.83L194.877 330.655C195.929 351.64 204.168 366.112 212.416 375.341C212.44 375.367 212.465 375.394 212.488 375.42C209.43 375.875 205.994 376.185 202.224 376.185C190.772 376.184 167.191 373.428 147.951 361.609C138.497 355.802 130.291 347.939 124.877 337.271C119.479 326.633 116.504 312.518 118.577 293.619C119.911 281.452 126.662 267.999 137.422 254.014C146.408 242.334 157.721 230.9 169.635 220.271ZM296.991 220.271C308.908 230.902 320.229 242.332 329.217 254.014C339.977 267.999 346.728 281.452 348.062 293.619C350.134 312.518 347.154 326.633 341.756 337.271C336.342 347.938 328.141 355.802 318.688 361.609C299.448 373.428 275.861 376.185 264.409 376.185C260.635 376.184 257.197 375.875 254.137 375.42C254.161 375.392 254.191 375.369 254.216 375.341C262.464 366.112 270.704 351.641 271.756 330.655C272.749 311.095 264.263 294.767 256.271 283.848C253.516 280.083 250.725 276.865 248.26 274.234C249.631 272.982 251.144 271.592 252.767 270.063C260.043 263.21 269.648 253.654 279.484 242.345C285.288 235.672 291.288 228.235 296.991 220.271ZM237.902 370.326C237.912 370.331 237.922 370.337 237.929 370.34L237.882 370.32L237.902 370.326ZM233.316 287.873C235.348 290.027 237.662 292.696 239.938 295.807C246.527 304.811 252.203 316.566 251.541 329.627V329.634C250.751 345.414 244.708 355.61 239.128 361.854C237.068 364.159 235.035 365.944 233.316 367.282C231.598 365.945 229.571 364.157 227.512 361.854C221.931 355.61 215.881 345.414 215.092 329.634V329.627L215.039 327.196C215.141 315.109 220.517 304.248 226.694 295.807C228.971 292.696 231.285 290.027 233.316 287.873ZM233.316 171.501C233.935 171.94 234.559 172.4 235.2 172.852C239.205 175.672 244.196 179.142 250.006 183.288C259.201 189.85 270.206 197.956 281.507 207.12C276.095 214.793 270.191 222.185 264.211 229.062C252.097 242.99 240.437 254.02 233.316 260.457C226.196 254.019 214.534 242.989 202.421 229.062C196.44 222.184 190.53 214.794 185.118 207.12C196.421 197.954 207.43 189.851 216.627 183.288C222.437 179.142 227.427 175.672 231.432 172.852C232.073 172.4 232.698 171.94 233.316 171.501ZM195.858 94.8125C195.064 97.3549 194.434 100.116 194.033 103.121C191.605 121.326 201.144 137.698 209.432 148.314C212.256 151.932 215.135 155.107 217.707 157.757C214.144 160.256 209.743 163.328 204.865 166.81C195.995 173.14 185.319 180.98 174.221 189.896C167.85 178.477 163.145 166.807 161.386 155.529L161.379 155.522L160.99 152.756C159.262 139.199 161.088 129.846 164.192 122.921C167.559 115.412 172.844 109.794 179.083 104.334L179.109 104.308C183.721 100.244 189.578 97.1487 195.858 94.8125ZM270.774 94.7861C277.034 97.1239 282.889 100.225 287.522 104.308L287.549 104.334C293.788 109.795 299.08 115.411 302.446 122.921C305.757 130.307 307.613 140.457 305.254 155.522V155.529C303.495 166.809 298.777 178.476 292.405 189.896C281.308 180.981 270.636 173.139 261.767 166.81C256.868 163.314 252.45 160.236 248.879 157.73C251.459 155.058 254.35 151.852 257.188 148.202C265.443 137.584 274.998 121.22 272.605 103.135V103.121L272.072 99.8926C271.722 98.0965 271.275 96.399 270.774 94.7861ZM233.698 88.2568C233.933 88.258 234.303 88.2528 234.792 88.2637C235.172 88.2797 235.653 88.2996 236.209 88.3623C237.928 88.5562 240.164 89.0183 242.389 90.0166C246.279 91.7633 251.162 95.5005 252.536 105.797C253.819 115.515 248.621 126.25 241.21 135.782C238.498 139.27 235.701 142.315 233.283 144.75C230.872 142.337 228.09 139.315 225.39 135.855C217.993 126.38 212.784 115.642 214.097 105.797C215.46 95.5784 220.382 91.817 224.415 90.0361C226.706 89.0245 229.011 88.559 230.786 88.3623C231.34 88.301 231.822 88.2874 232.209 88.2705C232.226 88.2701 232.245 88.2709 232.262 88.2705C232.763 88.2594 233.142 88.258 233.382 88.2568H233.698ZM233.909 88.2373C233.892 88.2383 233.877 88.2436 233.87 88.2441C233.875 88.2436 233.884 88.2377 233.896 88.2373H233.909Z"/>
+      </svg>
+
+      <!-- Wordmark — inlined SVG, fills with currentColor -->
+      <svg class="wordmark" viewBox="0 0 670 142" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zenith">
+        <path d="M15.5077 0H98.0088V1.74543L22.4345 131.214H64.4087C84.4654 131.214 95.114 129.469 105.142 121.666H105.969L103.178 141.789H0V140.454L75.781 10.6778H50.5552C32.0493 10.6778 22.9514 12.2179 13.5434 19.0969H12.7163L15.5077 0.102678V0Z" />
+        <path d="M130.37 32.2388C130.37 18.5835 129.749 8.00837 124.477 0H198.914L201.498 18.3782H200.878C191.987 11.7045 183.509 10.7805 164.28 10.7805H146.187V62.2189H193.434V78.2356C187.128 73.9234 180.098 72.3833 164.073 72.3833H146.187V105.649C146.187 116.429 146.601 124.438 149.289 131.111H169.346C189.195 131.111 198.707 129.777 207.391 122.692H208.218L205.634 141.892H130.473V32.2388H130.37Z" />
+        <path d="M233.235 141.687V11.2939C230.651 8.00837 227.963 4.62022 224.758 1.12939V0H243.677L331.037 109.858V29.8774C331.037 17.1461 330.417 8.72707 323.904 0H342.616V141.687H336.724L244.608 25.9759L245.021 111.809C245.021 124.54 245.642 132.959 250.707 141.687H233.235Z" />
+        <path d="M394.521 0V109.448C394.521 123.103 395.349 133.884 400.414 141.687H378.807V32.2388C378.807 18.5835 378.187 8.00837 372.914 0H394.521Z" />
+        <path d="M420.467 0H526.23L529.021 20.7396H528.401C517.752 12.1152 507.931 10.7805 488.288 10.7805H481.154V109.55C481.154 123.206 482.085 133.986 487.047 141.789H465.543V10.7805H458.616C438.973 10.7805 428.945 12.1152 418.503 20.7396H417.883L420.467 0Z" />
+        <path d="M664.04 109.448C664.04 123.103 664.764 133.884 669.933 141.687H648.325V75.9768H569.029V141.687H547.422C552.591 133.884 553.315 123.103 553.315 109.448V32.2388C553.315 18.5835 552.694 8.00837 547.422 0H569.029V65.299H648.325V0H669.933C664.66 8.00837 664.04 18.5835 664.04 32.2388V109.448Z" />
+      </svg>
+
+      <hr class="rule" />
+
+      <!-- =====================================================================
+           MESSAGE FROM ABIGAIL
+           TODO(abigail): Replace the placeholder copy below with the final
+           message. Keep paragraphs inside their own <p> tags. The signature
+           block at the bottom is ready to go.
+           ===================================================================== -->
+      <h1>A note on the next chapter</h1>
+
+      <div class="message">
+        <p>To the women, families, and friends who made Zenith part of their pregnancy journey —</p>
+
+        <p>After much reflection, we&rsquo;ve made the difficult decision to wind down Zenith. The app and Penny are no longer available, and active services have come to a close.</p>
+
+        <p>We set out to give pregnancy the clarity it deserves: evidence over noise, context over guesswork, confidence over second-guessing. We are endlessly grateful to everyone who trusted us with their questions and shared their experience along the way. You shaped everything we built.</p>
+
+        <p>If you have questions about your data or this transition, please reach out at <a href="mailto:hello@example.com">hello@example.com</a>. <!-- TODO(abigail): confirm contact address --></p>
+
+        <p>Thank you for being part of this. It was a privilege.</p>
+      </div>
+
+      <p class="signature">
+        With gratitude,<br />
+        <span class="name">Abigail</span>
+        <span class="role">Founder, Zenith</span>
+      </p>
+
+      <footer>
+        &copy; Zenith Health
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
