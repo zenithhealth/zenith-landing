@@ -15,11 +15,8 @@ ongoing subscription — just a domain and free static hosting.
 ## Editing the message
 
 The copy lives directly in `index.html` under the `MESSAGE FROM ABIGAIL` comment block.
-Each paragraph is its own `<p>` tag. Search the file for `TODO` to find the spots that
-still need real values:
-
-- The message body (currently tasteful placeholder copy).
-- The contact email (`hello@example.com`).
+Each paragraph is its own `<p>` tag; the three "things I want you to know" points are
+list items in the `<ul class="points">`. Contact address is `support@zenithhealth.io`.
 
 ## Branding notes
 

@@ -22,6 +22,7 @@
       --black:    #1F1E1E;
       --warm-grey:#ADA290;
       --rose:     #F3B8AE;
+      --mauve:    #C3808F;
 
       /* Self Modern / Suisse Intl are licensed brand fonts and cannot ship in a
          public repo, so we fall back to high-quality system stacks that keep the
@@ -104,6 +105,32 @@
       text-underline-offset: 2px;
     }
 
+    .message strong { font-weight: 600; }
+
+    .message ul.points {
+      list-style: none;
+      margin: 0 0 20px;
+      padding: 0;
+    }
+    .message ul.points li {
+      font-size: 17px;
+      line-height: 1.65;
+      margin: 0 0 16px;
+      padding-left: 20px;
+      position: relative;
+    }
+    .message ul.points li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--mauve);
+    }
+    .message .lead { font-weight: 600; color: var(--burgundy); }
+
     .signature {
       font-family: var(--serif);
       font-style: italic;
@@ -158,29 +185,28 @@
       <hr class="rule" />
 
       <!-- =====================================================================
-           MESSAGE FROM ABIGAIL
-           TODO(abigail): Replace the placeholder copy below with the final
-           message. Keep paragraphs inside their own <p> tags. The signature
-           block at the bottom is ready to go.
+           MESSAGE FROM ABIGAIL — final copy
            ===================================================================== -->
-      <h1>A note on the next chapter</h1>
+      <h1>A note from Abigail</h1>
 
       <div class="message">
-        <p>To the women, families, and friends who made Zenith part of their pregnancy journey —</p>
+        <p>I have hard news to share: Zenith Health is shutting down, and <strong>June&nbsp;10th will be the last day</strong> to access Penny and the Pregnancy Evidence Project.</p>
 
-        <p>After much reflection, we&rsquo;ve made the difficult decision to wind down Zenith. The app and Penny are no longer available, and active services have come to a close.</p>
+        <p>A few things I want you to know:</p>
 
-        <p>We set out to give pregnancy the clarity it deserves: evidence over noise, context over guesswork, confidence over second-guessing. We are endlessly grateful to everyone who trusted us with their questions and shared their experience along the way. You shaped everything we built.</p>
+        <ul class="points">
+          <li><span class="lead">Your data is yours.</span> We will never share, sell, or compromise your information in any way as part of this shut-down process. When the platform closes, all data and user information will be securely deleted.</li>
+          <li>If you&rsquo;ve been part of the Pregnancy Evidence Project and would like to save/retain any of the information you shared via surveys, please reach out to our team directly (<a href="mailto:support@zenithhealth.io">support@zenithhealth.io</a>) before <strong>June&nbsp;11th, 2026</strong>, and we will provide you with an export of all of your data.</li>
+          <li>If you have any questions or concerns, you can reach out via the support tab directly in the app, or send us an email at <a href="mailto:support@zenithhealth.io">support@zenithhealth.io</a>. We will respond quickly to ensure the transition is as smooth as possible for you.</li>
+        </ul>
 
-        <p>If you have questions about your data or this transition, please reach out at <a href="mailto:hello@example.com">hello@example.com</a>. <!-- TODO(abigail): confirm contact address --></p>
-
-        <p>Thank you for being part of this. It was a privilege.</p>
+        <p>We set out to bring clarity, context, and confidence to a part of the women&rsquo;s health journey that is so often filled with overwhelm, confusion, and anxiety. For every question you trusted Penny with, and every experience shared to the Evidence Project &mdash; thank you for trusting us. While this is not an email we ever hoped to be writing, it has been a true privilege to support you through your pregnancy journey.</p>
       </div>
 
       <p class="signature">
-        With gratitude,<br />
-        <span class="name">Abigail</span>
-        <span class="role">Founder, Zenith</span>
+        With care and with evidence always,<br />
+        <span class="name">Abigail Bertelson</span>
+        <span class="role">Founder, Zenith Health</span>
       </p>
 
       <footer>
